@@ -38,6 +38,7 @@ _sampler = {
 class TransformerLM(Module):
     """
     Basic Transformer for language modelling
+
     Parameters:
         * vocab_sz: int
         * d_model: int - inner dimension of the model
@@ -67,7 +68,7 @@ class TransformerLM(Module):
                  vocab_sz,
                  d_model,
                  n_layers=6,
-                 heads=8,
+                 n_heads=8,
                  d_ff=None,
                  attn_dropout=0.1,
                  ff_dropout=0.1,
@@ -82,17 +83,19 @@ class TransformerLM(Module):
                  prenorm=False,
                  attn_bias=True):
         store_attr('max_seq_len, n_layers, pad_idx')
-        self.emb = TransformerEmbedding(vocab_sz, d_model, max_seq_len, dropout=emb_dropout, pos_enc=pos_enc,
-                                        axial_shape=axial_shape, axial_emb_dims=axial_emb_dims)
-        self.tfmr = TransformerEncoder(d_model, n_layers, heads, causal=causal, d_ff=d_ff,
-                                       attn_dropout=attn_dropout, ff_dropout=ff_dropout,
-                                       prenorm=prenorm, attn_bias=attn_bias, final_norm=nn.LayerNorm)
+        self.emb = TransformerEmbedding(vocab_sz, d_model, max_seq_len, dropout=emb_dropout,
+                                        pos_enc=pos_enc, axial_shape=axial_shape,
+                                        axial_emb_dims=axial_emb_dims)
+        self.encoder = TransformerEncoder(d_model, n_layers, n_heads, causal=causal, d_ff=d_ff,
+                                          attn_dropout=attn_dropout, ff_dropout=ff_dropout,
+                                          prenorm=prenorm, attn_bias=attn_bias,
+                                          final_norm=nn.LayerNorm)
         self.proj = nn.Linear(d_model, vocab_sz)
         if tie_weights: self.proj.weight = self.emb.emb.weight
 
     def forward(self, x, mask=None):
         x = self.emb(x)
-        x = self.tfmr(x, mask=mask)
+        x = self.encoder(x, mask=mask)
         return self.proj(x)
 
     #TODO maybe refactor

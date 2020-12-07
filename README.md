@@ -14,4 +14,16 @@ Causal language modelling:
 
 ```python
 from standard_transformer.models import TransformerLM
+
+x = torch.randint(256, (1, 64)) # bs = 1, seq_len = 64
+model = TransformerLM(256, 64, max_seq_len=64, causal=True)
+out = model(x)
+out.shape
 ```
+
+
+
+
+    torch.Size([1, 64, 256])
+
+
