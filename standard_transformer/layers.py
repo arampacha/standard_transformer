@@ -394,5 +394,5 @@ class TransformerEmbedding(nn.Module):
         return self.dropout(x)
     def _init(self):
         nn.init.trunc_normal_(self.emb.weight, std = 0.02)
-        if hasattr(self.pos_enc, 'weight'):
-            nn.init.trunc_normal_(self.pos_enc.weight, std = 0.02)
+        if hasattr(self.pos_enc, 'emb'):
+            nn.init.trunc_normal_(self.pos_enc.emb.weight, std = 0.02)
