@@ -1,7 +1,7 @@
 {
   "standard_transformer": {
     "Overview": "/",
-    "module name here": "core.html",
+    "The Core": "core.html",
     "Layers ": "layers.html",
     "Models": "models.html"
   }

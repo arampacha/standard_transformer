@@ -71,7 +71,7 @@ nb_path: "02_models.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="top_p_filter" class="doc_header"><code>top_p_filter</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L19" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>top_p_filter</code>(<strong><code>logits</code></strong>, <strong><code>top_p</code></strong>=<em><code>0.9</code></em>)</p>
+<h4 id="top_p_filter" class="doc_header"><code>top_p_filter</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L20" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>top_p_filter</code>(<strong><code>logits</code></strong>, <strong><code>top_p</code></strong>=<em><code>0.9</code></em>)</p>
 </blockquote>
 
 </div>
@@ -95,7 +95,7 @@ nb_path: "02_models.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="top_k_filter" class="doc_header"><code>top_k_filter</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L33" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>top_k_filter</code>(<strong><code>logits</code></strong>, <strong><code>top_k</code></strong>=<em><code>20</code></em>)</p>
+<h4 id="top_k_filter" class="doc_header"><code>top_k_filter</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L34" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>top_k_filter</code>(<strong><code>logits</code></strong>, <strong><code>top_k</code></strong>=<em><code>20</code></em>)</p>
 </blockquote>
 
 </div>
@@ -126,7 +126,75 @@ nb_path: "02_models.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_axial_dims" class="doc_header"><code>get_axial_dims</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L46" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_axial_dims</code>(<strong><code>dim</code></strong>, <strong><code>n</code></strong>)</p>
+<h4 id="get_axial_dims" class="doc_header"><code>get_axial_dims</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L47" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_axial_dims</code>(<strong><code>dim</code></strong>, <strong><code>n</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Mixin">Mixin<a class="anchor-link" href="#Mixin"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="LMMixin" class="doc_header"><code>class</code> <code>LMMixin</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L53" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>LMMixin</code>()</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="EncDecMixin" class="doc_header"><code>class</code> <code>EncDecMixin</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L112" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>EncDecMixin</code>()</p>
 </blockquote>
 
 </div>
@@ -163,13 +231,13 @@ nb_path: "02_models.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="TransformerLM" class="doc_header"><code>class</code> <code>TransformerLM</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L52" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TransformerLM</code>(<strong><code>vocab_sz</code></strong>, <strong><code>dim</code></strong>, <strong><code>n_layers</code></strong>=<em><code>6</code></em>, <strong><code>heads</code></strong>=<em><code>8</code></em>, <strong><code>causal</code></strong>=<em><code>True</code></em>, <strong><code>max_seq_len</code></strong>=<em><code>512</code></em>, <strong><code>tie_weights</code></strong>=<em><code>True</code></em>, <strong><code>d_ff</code></strong>=<em><code>None</code></em>, <strong><code>attn_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>ff_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>emb_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>pos_enc</code></strong>=<em><code>'absolute'</code></em>, <strong><code>pad_idx</code></strong>=<em><code>None</code></em>, <strong><code>prenorm</code></strong>=<em><code>False</code></em>, <strong><code>axial_shape</code></strong>=<em><code>None</code></em>, <strong><code>axial_emb_dims</code></strong>=<em><code>None</code></em>, <strong><code>attn_bias</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
+<h2 id="TransformerLM" class="doc_header"><code>class</code> <code>TransformerLM</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L195" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TransformerLM</code>(<strong><code>vocab_sz</code></strong>, <strong><code>d_model</code></strong>, <strong><code>n_layers</code></strong>=<em><code>6</code></em>, <strong><code>heads</code></strong>=<em><code>8</code></em>, <strong><code>causal</code></strong>=<em><code>True</code></em>, <strong><code>max_seq_len</code></strong>=<em><code>512</code></em>, <strong><code>tie_weights</code></strong>=<em><code>True</code></em>, <strong><code>d_ff</code></strong>=<em><code>None</code></em>, <strong><code>attn_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>ff_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>emb_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>pos_enc</code></strong>=<em><code>'absolute'</code></em>, <strong><code>pad_idx</code></strong>=<em><code>None</code></em>, <strong><code>prenorm</code></strong>=<em><code>False</code></em>, <strong><code>axial_shape</code></strong>=<em><code>None</code></em>, <strong><code>axial_emb_dims</code></strong>=<em><code>None</code></em>, <strong><code>attn_bias</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>Basic Transformer for language modelling
 Parameters:</p>
 
 <pre><code>* vocab_sz: int
-* dim: int - inner dimension of the model
+* d_model: int - inner dimension of the model
 * n_layers: int (default: 6)
 * heads: int (default: 8)
 * causal: bool (default: True) - if True does causal masking automatically
@@ -259,14 +327,14 @@ Parameters:</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="TransformerEncDec" class="doc_header"><code>class</code> <code>TransformerEncDec</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L152" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TransformerEncDec</code>(<strong><code>enc_vocab_sz</code></strong>, <strong><code>dec_vocab_sz</code></strong>, <strong><code>dim</code></strong>, <strong><code>n_layers</code></strong>=<em><code>6</code></em>, <strong><code>heads</code></strong>=<em><code>8</code></em>, <strong><code>max_seq_len</code></strong>=<em><code>512</code></em>, <strong><code>pad_idx</code></strong>=<em><code>None</code></em>, <strong><code>tie_weights</code></strong>=<em><code>True</code></em>, <strong><code>attn_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>ff_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>enc_emb_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>dec_emb_dropout</code></strong>=<em><code>0</code></em>, <strong><code>pos_enc</code></strong>=<em><code>'absolute'</code></em>, <strong><code>d_ff</code></strong>=<em><code>None</code></em>, <strong><code>prenorm</code></strong>=<em><code>False</code></em>, <strong><code>axial_shape</code></strong>=<em><code>None</code></em>, <strong><code>axial_emb_dims</code></strong>=<em><code>None</code></em>, <strong><code>comb_attn</code></strong>=<em><code>False</code></em>, <strong><code>attn_bias</code></strong>=<em><code>True</code></em>, <strong><code>shared_emb</code></strong>=<em><code>False</code></em>, <strong><code>enc_n_layers</code></strong>=<em><code>None</code></em>, <strong><code>dec_n_layers</code></strong>=<em><code>None</code></em>) :: <code>Module</code></p>
+<h2 id="Transformer" class="doc_header"><code>class</code> <code>Transformer</code><a href="https://github.com/arampacha/standard_transformer/tree/master/standard_transformer/models.py#L240" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Transformer</code>(<strong><code>enc_vocab_sz</code></strong>, <strong><code>dec_vocab_sz</code></strong>, <strong><code>d_model</code></strong>, <strong><code>n_layers</code></strong>=<em><code>6</code></em>, <strong><code>heads</code></strong>=<em><code>8</code></em>, <strong><code>max_seq_len</code></strong>=<em><code>512</code></em>, <strong><code>pad_idx</code></strong>=<em><code>None</code></em>, <strong><code>tie_weights</code></strong>=<em><code>True</code></em>, <strong><code>attn_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>ff_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>enc_emb_dropout</code></strong>=<em><code>0.1</code></em>, <strong><code>dec_emb_dropout</code></strong>=<em><code>0</code></em>, <strong><code>pos_enc</code></strong>=<em><code>'absolute'</code></em>, <strong><code>d_ff</code></strong>=<em><code>None</code></em>, <strong><code>prenorm</code></strong>=<em><code>False</code></em>, <strong><code>axial_shape</code></strong>=<em><code>None</code></em>, <strong><code>axial_emb_dims</code></strong>=<em><code>None</code></em>, <strong><code>comb_attn</code></strong>=<em><code>False</code></em>, <strong><code>attn_bias</code></strong>=<em><code>True</code></em>, <strong><code>shared_emb</code></strong>=<em><code>False</code></em>, <strong><code>enc_n_layers</code></strong>=<em><code>None</code></em>, <strong><code>dec_n_layers</code></strong>=<em><code>None</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>Basic Transformer Encoder-Decoder model
 Parameters:</p>
 
 <pre><code>* enc_vocab_sz: int - source vocab size
 * dec_vocab_sz: int - target vocab size
-* dim: int - inner dimension of the model
+* d_model: int - inner dimension of the model
 * n_layers: int (default: 6)
 * heads: int (default: 8)
 * max_seq_len: int (default: 512)
@@ -318,7 +386,7 @@ Parameters:</p>
 <span class="n">tgt_vocab_sz</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="n">src</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">src_vocab_sz</span><span class="p">,</span> <span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="n">src_sl</span><span class="p">))</span>
 <span class="n">tgt</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">tgt_vocab_sz</span><span class="p">,</span> <span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="n">tgt_sl</span><span class="p">))</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">TransformerEncDec</span><span class="p">(</span><span class="n">src_vocab_sz</span><span class="p">,</span> <span class="n">tgt_vocab_sz</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n_layers</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Transformer</span><span class="p">(</span><span class="n">src_vocab_sz</span><span class="p">,</span> <span class="n">tgt_vocab_sz</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n_layers</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">tgt</span><span class="p">)</span>
 <span class="n">out</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>

@@ -12,6 +12,8 @@ index = {"exists": "01_layers.ipynb",
          "MASK_VAL": "01_layers.ipynb",
          "Attention": "01_layers.ipynb",
          "AdditiveAttention": "01_layers.ipynb",
+         "AttnInProj": "01_layers.ipynb",
+         "ScaledDotProdAttention": "01_layers.ipynb",
          "TransformerEncoderBlock": "01_layers.ipynb",
          "TransformerEncoder": "01_layers.ipynb",
          "TransformerDecoderBlock": "01_layers.ipynb",
@@ -24,8 +26,10 @@ index = {"exists": "01_layers.ipynb",
          "top_k_filter": "02_models.ipynb",
          "sampler": "02_models.ipynb",
          "get_axial_dims": "02_models.ipynb",
+         "LMMixin": "02_models.ipynb",
+         "EncDecMixin": "02_models.ipynb",
          "TransformerLM": "02_models.ipynb",
-         "TransformerEncDec": "02_models.ipynb"}
+         "Transformer": "02_models.ipynb"}
 
 modules = ["layers.py",
            "models.py"]
